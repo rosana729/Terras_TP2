@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Historia del Saber: De la Repetición al Remix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .comic-panel {
+            background: white;
+            border: 4px solid #2d3748;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .comic-panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+        
+        .speech-bubble {
+            background: #fff;
+            border: 3px solid #2d3748;
+            border-radius: 20px;
+            padding: 12px 16px;
+            position: relative;
+            margin: 8px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #2d3748;
+        }
+        
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            left: 22px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #fff;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border: 2px solid #e53e3e;
+            border-radius: 12px;
+            padding: 10px;
+            margin: 8px 0;
+            font-style: italic;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .panel-title {
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+        
+        .comic-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .main-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .panel-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background: #e53e3e;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: 3px solid white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4">
+    <div class="container mx-auto max-w-7xl">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold main-title mb-4">
+                📚 La Historia del Saber: De la Repetición al Remix 🎨
+            </h1>
+            <p class="text-xl text-white bg-black bg-opacity-20 rounded-lg p-4 backdrop-blur-sm">
+                Una historieta educativa sobre alfabetización mediática y digital en la escuela híbrida
+            </p>
+        </div>
+
+        <!-- Comic Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            
+            <!-- Panel 1: Aula Tradicional -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">1</div>
+                <div class="panel-title">El Aula Tradicional</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/f0763d4b-d9a2-41ff-ba59-0d35b7a71a46/vineta1_aula_tradicional_20251101170704_1.png" alt="Aula tradicional" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Profesor:</strong> "Copien todo del pizarrón. Esto estará en el examen."
+                </div>
+                <div class="quote-box">
+                    💡 <strong>Cita:</strong> "Saber cómo utilizar tecnología no es lo mismo que saber cómo enseñar con tecnología." <br><em>- Mishra & Koehler, 2006</em>
+                </div>
+            </div>
+
+            <!-- Panel 2: Pregunta Generativa -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">2</div>
+                <div class="panel-title">La Pregunta Generativa</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/eee1d352-37f2-4260-affc-2ea3d39f314c/vineta2_pregunta_generativa_20251101170703_1.png" alt="Pregunta generativa" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Docente Curador:</strong> "¿Cómo transformaríamos este conocimiento en un producto digital propio?"
+                </div>
+                <div class="quote-box">
+                    🚀 <strong>ABP:</strong> El aprendizaje basado en proyectos despierta la curiosidad y motiva la investigación activa.
+                </div>
+            </div>
+
+            <!-- Panel 3: Aula Aumentada -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">3</div>
+                <div class="panel-title">El Aula Aumentada</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/246d98e6-6445-4d4f-85e8-cf7659a5721a/vineta3_aula_aumentada_20251101170706_1.png" alt="Aula aumentada" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Estudiante:</strong> "¡Podemos colaborar desde casa y en el aula al mismo tiempo!"
+                </div>
+                <div class="quote-box">
+                    ☁️ <strong>Cita:</strong> "La tecnología educativa no es sólo usar computadoras, sino cambiar la forma de enseñar y aprender..." <br><em>- Educación con TIC</em>
+                </div>
+            </div>
+
+            <!-- Panel 4: Alumno Prosumidor -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">4</div>
+                <div class="panel-title">El Alumno Prosumidor</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/476173d9-3c4a-47d9-b20a-b98ea2285536/vineta4_alumno_prosumidor_20251101170704_1.png" alt="Alumno prosumidor" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Prosumidor:</strong> "Miren mi remix: combiné el video, agregué música y creé infografías!"
+                </div>
+                <div class="quote-box">
+                    🎨 <strong>Cita:</strong> "Tener ambos productos en archivo digital los convierte en objetos de aprendizaje digitales..." <br><em>- Sagol, 2013/2023</em>
+                </div>
+            </div>
+
+            <!-- Panel 5: Docente Curador -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">5</div>
+                <div class="panel-title">El Docente Curador</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/daf0df54-48fe-4756-b5ce-2efad61a27c8/vineta5_docente_curador_20251101170704_1.png" alt="Docente curador" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Curador:</strong> "Aquí tienen recursos seleccionados: REA, videos, simuladores..."
+                </div>
+                <div class="quote-box">
+                    🎯 <strong>Cita:</strong> "Los entornos que incorporan las TIC... adoptan la forma de un diseño tecno-pedagógico." <br><em>- Coll, Onrubia y Mauri, 2007</em>
+                </div>
+            </div>
+
+            <!-- Panel 6: Evaluación Formativa -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">6</div>
+                <div class="panel-title">Evaluación Formativa</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/0e6f5d80-cb5b-448d-a703-9a149499b44e/vineta6_evaluacion_formativa_20251101170705_1.png" alt="Evaluación formativa" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Estudiante:</strong> "Usemos la rúbrica para evaluar nuestros proyectos juntos."
+                </div>
+                <div class="quote-box">
+                    📊 <strong>Cita:</strong> "El papel del docente es más el de un facilitador que el de un evaluador nato..." <br><em>- Edupunk aplicado</em>
+                </div>
+            </div>
+
+            <!-- Panel 7: Nuevas Alfabetizaciones -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">7</div>
+                <div class="panel-title">Nuevas Alfabetizaciones</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/bf4f104f-0049-4667-b876-9591e4d5925b/vineta7_nuevas_alfabetizaciones_20251101170705_1.png" alt="Nuevas alfabetizaciones" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Estudiantes:</strong> "¡Creamos memes, podcasts, historietas y videos!"
+                </div>
+                <div class="quote-box">
+                    🌐 <strong>Cita:</strong> "Hablamos de lo que Henry Jenkins llama New Media Literacies..." <br><em>- Uman, 2010</em>
+                </div>
+            </div>
+
+            <!-- Panel 8: Cierre - El Remix Cultural -->
+            <div class="comic-panel p-4">
+                <div class="panel-number">8</div>
+                <div class="panel-title">El Remix Cultural</div>
+                <img src="https://skyagent-artifacts.skywork.ai/image/1984668383766192128/a955a9c8-758a-43e6-be8f-03a1a2eabda9/vineta8_cierre_remix_20251101170705_1.png" alt="Cierre remix" class="comic-image">
+                <div class="speech-bubble">
+                    <strong>Estudiantes:</strong> "¡Presentamos nuestra historieta digital!"
+                </div>
+                <div class="quote-box">
+                    🎭 <strong>Reflexión:</strong> "Del copiar al remixar: el conocimiento ahora es un caleidoscopio en nuestras manos."
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with Educational Context -->
+        <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">🎓 Conceptos Clave Integrados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-blue-100 p-4 rounded-lg">
+                    <h3 class="font-bold text-blue-800">TPACK</h3>
+                    <p class="text-sm">Integración de tecnología, pedagogía y contenido</p>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg">
+                    <h3 class="font-bold text-green-800">ABP</h3>
+                    <p class="text-sm">Aprendizaje Basado en Proyectos</p>
+                </div>
+                <div class="bg-purple-100 p-4 rounded-lg">
+                    <h3 class="font-bold text-purple-800">Aula Aumentada</h3>
+                    <p class="text-sm">Espacios híbridos de aprendizaje</p>
+                </div>
+                <div class="bg-orange-100 p-4 rounded-lg">
+                    <h3 class="font-bold text-orange-800">Multimodalidad</h3>
+                    <p class="text-sm">Múltiples formas de representar el conocimiento</p>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <p class="text-gray-600 italic">
+                    "Una historieta educativa que transforma la enseñanza tradicional en experiencias de aprendizaje significativas y colaborativas."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive hover effects
+        document.querySelectorAll('.comic-panel').forEach(panel => {
+            panel.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            panel.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add click animation for panels
+        document.querySelectorAll('.comic-panel').forEach(panel => {
+            panel.addEventListener('click', function() {
+                this.style.animation = 'pulse 0.6s ease-in-out';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 600);
+            });
+        });
+
+        // Add CSS animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
